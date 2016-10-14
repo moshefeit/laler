@@ -71,11 +71,12 @@ class Player extends FlxSprite
 	public function move()
 	{
 		
-		var randomDecision = value.getObject(valueHolder);
+		var randomDecision = value.getObject(valueHolder); // While moving straight, randomly decided to turn
 		var randomTurn = value.getObject([ -45, 45]);
 		
 		if (this.turn.indexOf(randomDecision) != -1)
 		{
+			// If the picked number is 5, 6, 10, or 11, turn
 			this.directions = this.directions + randomTurn;
 		}
 				
@@ -89,7 +90,6 @@ class Player extends FlxSprite
 		
 		this.velocity.set(this.speed, 0);
 		this.velocity.rotate(FlxPoint.weak(0, 0), this.directions);
-		
 		this.fixDirections();
 	}
 	
