@@ -70,11 +70,12 @@ class Player extends FlxSprite
 	
 	public function move()
 	{
+		this.reachingEdge();
 		
 		var randomDecision = value.getObject(valueHolder); // While moving straight, randomly decided to turn
 		var randomTurn = value.getObject([ -45, 45]);
 		
-		if (this.turn.indexOf(randomDecision) != -1)
+		if (this.turn.indexOf(Std.int(Math.random()*20)) != -1)
 		{
 			// If the picked number is 5, 6, 10, or 11, turn
 			this.directions = this.directions + randomTurn;
@@ -160,10 +161,8 @@ class Player extends FlxSprite
 	override public function update(elapsed:Float):Void
 	{
 		if (this.allowed == 1)
-		{
-			this.move();
-			this.reachingEdge();
-			
+		{			
+			this.move();			
 			super.update(elapsed);
 			
 		}
