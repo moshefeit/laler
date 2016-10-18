@@ -6,7 +6,8 @@ Laler-Laleran dalam Haxe. To be implemented an AI algorithm that behaves like a 
 * Target to learn how to evade the best, and so missile learn how to chase the best
 * And so much more (more to be implemented later).
 
-Done:
+###Done:
 * Running behavior for target/prey
-To do:
+
+###To do:
 * Running begavior for missile/predator
